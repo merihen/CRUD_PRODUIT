@@ -1,3 +1,7 @@
+#Json server 
+j 'ai utilisé json server pour la partie back  run json-server en utilisant cette cmd 
+json-server --watch db.json
+
 # CRUDProduit
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
