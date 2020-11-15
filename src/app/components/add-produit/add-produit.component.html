@@ -1,0 +1,50 @@
+
+<fieldset class="border p-4">
+  <legend>Ajouter Produit :</legend>
+
+
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="designation">Designation</label>
+        <input
+          type="text"
+          class="form-control"
+          id="designation"
+          required
+          [(ngModel)]="produit.designation"
+          name="designation"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="prix">Prix</label>
+        <input
+          class="form-control"
+          id="prix"
+          required
+          [(ngModel)]="produit.prix"
+          name="prix"
+        />
+      </div>
+      <div class="form-group">
+        <label for="qte">Quantité</label>
+        <input
+          class="form-control"
+          id="qte"
+          required
+          [(ngModel)]="produit.qte"
+          name="qte"
+        />
+      </div>
+  
+      <button (click)="saveProduit()" class="btn btn-success">Submit</button>
+    </div>
+  
+    <div *ngIf="submitted">
+      <h4>Votre Produit a été bien enregistré !</h4>
+      <button class="btn btn-success" (click)="newProduit()">Add</button>
+    </div>
+  </div>
+ 
+</fieldset>
